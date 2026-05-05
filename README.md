@@ -30,7 +30,7 @@
     <!-- المرحلة 1: الفيديو الأول -->
     <div id="step1" class="step">
         <p>أنا آسف كدا 😂😂😂</p>
-        <video controls><source src="video1.mp4" type="video/mp4"></video>
+        <video controls><source src="WhatsApp Video1.mp4" type="video/mp4"></video>
         <p>أول فيديو عشان نصفي النفوس يا ست منّة</p>
         <button onclick="nextStep(1, 2)">شوفي اللي بعده</button>
     </div>
@@ -38,7 +38,7 @@
     <!-- المرحلة 2: الفيديو الثاني -->
     <div id="step2" class="step">
         <p>أنا آسف كدا 😂😂😂</p>
-        <video controls><source src="video2.mp4" type="video/mp4"></video>
+        <video controls><source src="WhatsApp Video2.mp4" type="video/mp4"></video>
         <p>وده التاني متزعليش وبعدين مش لاقي فديو بصراحه غير دا اوعي احمد يشوفه </p>
         <button onclick="nextStep(2, 3)">لسه فيه واحد كمان..</button>
     </div>
@@ -46,7 +46,7 @@
     <!-- المرحلة 3: الفيديو الثالث -->
     <div id="step3" class="step">
         <p>أنا آسف كدا 😂😂😂</p>
-        <video controls><source src="video3.mp4" type="video/mp4"></video>
+        <video controls><source src="WhatsApp Video3.mp4" type="video/mp4"></video>
         <p>آخر واحد بقى.. خلاص كدة صافي يا لبن؟</p>
         <button onclick="celebrate()">صالحيني بقى! 🤝</button>
     </div>
