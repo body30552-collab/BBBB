@@ -3,92 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أحلى ذكريات الشلة 🎬</title>
+    <title>رسالة خاصة لمنّة ✨</title>
     <style>
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        h1 { color: #2d3436; font-size: 1.8rem; }
-        .media-box {
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        video {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            background: black; /* عشان لو الفيديو متحملش */
-        }
-        p.message { font-size: 1.1rem; line-height: 1.7; color: #606770; }
-        button {
-            background: #00b894;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 1.1rem;
-            margin-top: 15px;
-        }
+        body { background: #f0f2f5; font-family: 'Segoe UI', Tahoma, sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .step { display: none; }
+        .active { display: block; }
+        video { width: 100%; border-radius: 15px; margin-top: 15px; background: #000; }
+        h1 { color: #1c1e21; font-size: 1.8rem; }
+        p { font-size: 1.2rem; color: #606770; line-height: 1.6; }
+        button { background: #42b72a; color: white; border: none; padding: 12px 25px; border-radius: 10px; font-size: 1.1rem; cursor: pointer; margin-top: 20px; width: 100%; }
+        input { width: 90%; padding: 12px; margin-top: 10px; border: 1px solid #ddd; border-radius: 10px; text-align: center; font-size: 1rem; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>يا منّة.. صافي يا لبن؟ 🤝</h1>
-        <p class="message">
-            شوفي الفيديوهات دي وافتكري أيامنا الحلوة.. <br>
-            عملت لك الصفحة دي مخصوص عشان أقولك إنك صديقة غالية، <br>
-            ومش عايزين الزعل يطول أكتر من كدة.
-        </p>
-        
-        <div class="media-box">
-            
-            <!-- الفيديو الأول -->
-            <video controls>
-                <source src="WhatsApp Video1.mp4" type="video/mp4">
-                متصفحك لا يدعم الفيديو.
-            </video>
 
-            <!-- الفيديو الثاني -->
-            <video controls>
-                <source src="WhatsApp Video2.mp4" type="video/mp4">
-                متصفحك لا يدعم الفيديو.
-            </video>
-
-            <!-- الفيديو الثالث (الجديد) -->
-            <video controls>
-                <source src="WhatsApp Video3.mp4" type="video/mp4">
-                متصفحك لا يدعم الفيديو.
-            </video>
-
-        </div>
-
-        <p class="message"><b>أجدع صديقة والله، ما تبيش قفوشة بقى! ✨</b></p>
-        <button onclick="makeConfetti()">خلاص حصل خير 🕊️</button>
+<div class="container">
+    <!-- المرحلة 0: الباسورد -->
+    <div id="step0" class="step active">
+        <h1>رسالة لمنّة 🌟</h1>
+        <p>اكتبي الباسورد عشان تشوفي </p>
+        <input type="password" id="passInput" placeholder="الباسورد هنا..">
+        <button onclick="checkPass()">دخول</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script>
-        function makeConfetti() {
-            confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
-            setTimeout(() => { alert('أجدع صديقة في الدنيا والله! ❤️'); }, 500);
+    <!-- المرحلة 1: الفيديو الأول -->
+    <div id="step1" class="step">
+        <p>أنا آسف كدا 😂😂😂</p>
+        <video controls><source src="video1.mp4" type="video/mp4"></video>
+        <p>أول فيديو عشان نصفي النفوس يا ست منّة</p>
+        <button onclick="nextStep(1, 2)">شوفي اللي بعده</button>
+    </div>
+
+    <!-- المرحلة 2: الفيديو الثاني -->
+    <div id="step2" class="step">
+        <p>أنا آسف كدا 😂😂😂</p>
+        <video controls><source src="video2.mp4" type="video/mp4"></video>
+        <p>وده التاني متزعليش وبعدين مش لاقي فديو بصراحه غير دا اوعي احمد يشوفه </p>
+        <button onclick="nextStep(2, 3)">لسه فيه واحد كمان..</button>
+    </div>
+
+    <!-- المرحلة 3: الفيديو الثالث -->
+    <div id="step3" class="step">
+        <p>أنا آسف كدا 😂😂😂</p>
+        <video controls><source src="video3.mp4" type="video/mp4"></video>
+        <p>آخر واحد بقى.. خلاص كدة صافي يا لبن؟</p>
+        <button onclick="celebrate()">صالحيني بقى! 🤝</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+    // الباسورد (تقدر تغيره براحتك)
+    const CORRECT_PASSWORD = "MEENA"; 
+
+    function checkPass() {
+        const input = document.getElementById('passInput').value;
+        if(input === CORRECT_PASSWORD) {
+            nextStep(0, 1);
+        } else {
+            alert('الباسورد غلط!');
         }
-    </script>
+    }
+
+    function nextStep(current, next) {
+        document.getElementById('step' + current).classList.remove('active');
+        document.getElementById('step' + next).classList.add('active');
+        window.scrollTo(0,0);
+    }
+
+    function celebrate() {
+        confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+        alert('أجدع صديقة والله! ❤️');
+    }
+</script>
 </body>
 </html>
