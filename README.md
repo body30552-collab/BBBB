@@ -55,7 +55,7 @@
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 <script>
     // الباسورد (تقدر تغيره براحتك)
-    const CORRECT_PASSWORD = "MEENA"; 
+    const CORRECT_PASSWORD = "MENNA"; 
 
     function checkPass() {
         const input = document.getElementById('passInput').value;
